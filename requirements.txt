@@ -1,0 +1,11 @@
+# Диапазоны версий, а не жёсткие пины: pip берёт свежие сборки (wheels) под ту версию Python,
+# которую выбрал хостинг (проверено на Python 3.11, 3.12, 3.13 и 3.14 — ничего не компилируется).
+# Старые пины (aiogram 3.13.1 / pydantic 2.9.2 / aiohttp 3.10.10 / psycopg2-binary 2.9.9)
+# не имеют сборок под Python 3.13+ и падали на Render с ошибкой pydantic-core / maturin / Rust.
+aiogram>=3.31,<4
+aiohttp>=3.13,<4
+aiofiles>=24.1,<26
+psycopg2-binary>=2.9.11,<3
+python-dotenv>=1.0,<2
+requests>=2.32,<3
+certifi>=2023.7.22
